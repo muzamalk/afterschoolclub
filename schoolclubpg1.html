@@ -1,0 +1,444 @@
+﻿
+<!-- 
+     Individual one upload to github
+    -->
+<!DOCTYPE html>
+<html>
+
+<head>
+<body style="background-color:grey;">
+    <title>After School Club</title>
+
+    <!-- scripts and imports -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+
+<body>
+    <h1>School Clubs Available </h1>
+    <div id="app">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+         <style>
+         h1 {text-align: center;}
+         <h1>School Clubs Available </h1>
+         
+    
+</style
+</head>
+         <div id="app2">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+
+     <div id="app3">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+     <div id="app4">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+    
+     <div id="app5">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+     <div id="app6">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+     <div id="app7">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+    <div id="app8">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+     <div id="app9">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+
+    <div id="app10">
+        <!-- start app div -->
+        <!-- lesson information -->
+        <img v-bind:src="lesson.image" height="150">
+        <h2>{{lesson.subject}}</h1>
+            <p>Number of spaces:{{lesson.availableInventory - cartItemCount}}</p>
+            <p>Location: {{lesson.location}}</p>
+            <p>Price: {{lesson.price}}</p>
+
+            <button @click="addToCart" v-bind:disabled="!canAddToCart">Add to cart</button>
+    </div> <!-- Stop app div -->
+}
+    <script>
+
+        let app = new Vue({
+
+            el: '#app',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Math",
+                    location: "Holborn",
+                    price: 50,
+                    image: "mathicon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+ 
+        let app2 = new Vue({
+
+            el: '#app2',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "English",
+                    location: "Stratford",
+                    price: 50,
+                    image: "englishicon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+        let app3 = new Vue({
+
+            el: '#app3',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Science",
+                    location: "Croydon",
+                    price: 30,
+                    image: "scienceicon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+        
+        let app4 = new Vue({
+
+            el: '#app4',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "IT",
+                    location: "Hendon",
+                    price: 50,
+                    image: "iticon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+         let app5 = new Vue({
+
+            el: '#app5',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "PE",
+                    location: "Brixton",
+                    price: 50,
+                    image: "peicon.jpg",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+
+        let app6 = new Vue({
+
+            el: '#app6',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Art",
+                    location: "Peckham",
+                    price: 50,
+                    image: "articon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+            });
+        
+                 let app7 = new Vue({
+
+            el: '#app7',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "History",
+                    location: "Walthamstow",
+                    price: 50,
+                    image: "historyicon.jpg",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+
+
+        
+                 let app8 = new Vue({
+
+            el: '#app8',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Geography",
+                    location: "Edmonton Green",
+                    price: 50,
+                    image: "Geographyicon.jpg",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+
+        
+                 let app9 = new Vue({
+
+            el: '#app9',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Spanish",
+                    location: "London Bridge",
+                    price: 50,
+                    image: "spanishicon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },
+        });
+            let app10 = new Vue({
+
+            el: '#app10',
+            data: {
+                lesson: {
+                    id: 200,
+                    subject: "Economics",
+                    location: "Tottenham",
+                    price: 50,
+                    image: "economicicon.png",
+                    availableInventory: 5
+                },
+                cart: [] // array to store items in shopping cart
+                  },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.id);
+                },
+            },
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCart: function () {
+                    return this.lesson.availableInventory > this.cartItemCount;
+                }
+            },        
+        })
+
+    </script>
+   
+</body>
+
+</html>
